@@ -8,7 +8,7 @@ ArrayList<Integer>list=  new  ArrayList<Integer>();
   int startCol=0;
   int endCol=c-1;
 
-  while(startRow<=endRow && startCol<= endCol){
+  while(list.size() < r*c){
 
     //from the starting row-->right direction
     for(int i=startCol;i<=endCol;i++){
