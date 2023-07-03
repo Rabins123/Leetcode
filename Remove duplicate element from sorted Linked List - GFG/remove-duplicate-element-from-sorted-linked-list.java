@@ -77,21 +77,19 @@ class GfG
     Node removeDuplicates(Node head)
     {
 	// Your code here
-	if(head==null || head.next==null){
-	    return head;
-	}
-	Node temp1=head;
-	Node temp2=head.next;
-	while(temp2 !=null){
-	    if(temp1.data==temp2.data){
-	        temp1.next=temp2.next;
-	        temp2=temp2.next;
-	    }
-	    else{
-	        temp1=temp1.next;
-	        temp2=temp2.next;
-	    }
-	}
-	return head;
+ if (head == null || head.next == null) {
+            return head;
+        }
+        
+        Node temp = head;
+        while (temp != null && temp.next != null) {
+            if (temp.data == temp.next.data) {
+                temp.next = temp.next.next;
+            } else {
+                temp = temp.next;
+            }
+        }
+        
+        return head;
     }
 }
